@@ -16,7 +16,10 @@ namespace FlashcardApp
 
         public static void RegisterCommands(ICommandCollection commands)
         {
-
+            commands.Register(new ManageStacksCommand());
+            commands.Register(new ManageFlashcardsCommand());
+            commands.Register(new StudyCommand());
+            commands.Register(new ViewStudySessionCommand());
         }
     }
 }
