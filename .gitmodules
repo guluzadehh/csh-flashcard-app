@@ -1,0 +1,3 @@
+[submodule "Lib/csh-console-library"]
+	path = Lib/csh-console-library
+	url = https://github.com/guluzadehh/csh-console-library.git
