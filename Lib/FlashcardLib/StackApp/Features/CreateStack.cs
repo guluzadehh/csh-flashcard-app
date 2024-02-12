@@ -6,7 +6,9 @@ namespace FlashcardLib
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            string name = App.Input.Get("Enter name");
+            StackModel stack = SqlAccess.CreateStack(name);
+            SendResponse($"Stack [{stack.Id}] ({stack.Name}) was created successfully!");
         }
     }
 }
