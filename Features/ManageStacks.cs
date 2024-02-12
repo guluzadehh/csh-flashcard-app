@@ -1,4 +1,6 @@
+using CommandApp.App;
 using CommandApp.Feature;
+using FlashcardLib;
 
 namespace FlashcardApp
 {
@@ -6,7 +8,8 @@ namespace FlashcardApp
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            IApp app = StackApp.Create();
+            app.Start();
         }
     }
 }
