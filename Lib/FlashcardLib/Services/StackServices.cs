@@ -2,10 +2,8 @@ using CommandApp.App;
 
 namespace FlashcardLib
 {
-    public class StackServices(IApp app)
+    public class StackServices(IApp app) : BaseService(app)
     {
-        private IApp App { get; } = app;
-
         public void ListStacks()
         {
             List<StackModel> stacks = StackRepo.AllStack();
