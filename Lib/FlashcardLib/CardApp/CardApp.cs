@@ -1,5 +1,6 @@
 using CommandApp.App;
 using CommandApp.Command;
+using CommandApp.Exceptions;
 
 namespace FlashcardLib
 {

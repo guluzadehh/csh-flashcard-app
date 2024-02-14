@@ -1,12 +1,14 @@
-using CommandApp.Feature;
-
 namespace FlashcardLib
 {
-    public class DeleteCardFeature : BaseFeature
+    public class DeleteCardFeature : CardBaseFeature
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            CardServices cardServices = new(App);
+            CardModel card = cardServices.GetCard(CurrentStack);
+
+            CardRepo.DeleteCard(card);
+            SendResponse($"Card [{card.Id}] was deleted successfully!");
         }
     }
 }

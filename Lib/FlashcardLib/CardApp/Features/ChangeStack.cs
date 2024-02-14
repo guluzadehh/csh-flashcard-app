@@ -1,12 +1,13 @@
-using CommandApp.Feature;
-
 namespace FlashcardLib
 {
-    public class ChangeStackFeature : BaseFeature
+    public class ChangeStackFeature : CardBaseFeature
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            StackServices stackServices = new(App);
+            StackModel stack = stackServices.GetStack();
+            CurrentStack = stack;
+            SendResponse($"Current Stack was set to {CurrentStack.Name}");
         }
     }
 }

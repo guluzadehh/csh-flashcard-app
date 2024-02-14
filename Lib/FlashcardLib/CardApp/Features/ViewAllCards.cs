@@ -1,12 +1,12 @@
-using CommandApp.Feature;
-
 namespace FlashcardLib
 {
-    public class ViewAllCardsFeature : BaseFeature
+    public class ViewAllCardsFeature : CardBaseFeature
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            CardServices cardServices = new(App);
+            cardServices.ListCards(CurrentStack);
+            App.Output.Wait();
         }
     }
 }

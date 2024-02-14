@@ -1,12 +1,15 @@
-using CommandApp.Feature;
-
 namespace FlashcardLib
 {
-    public class ViewXCardsFeature : BaseFeature
+    public class ViewXCardsFeature : CardBaseFeature
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            int amount = Helpers.GetIntInput(App.Input, "Enter amount");
+
+            CardServices cardServices = new(App);
+            cardServices.ListCards(CurrentStack, amount);
+
+            App.Output.Wait();
         }
     }
 }
