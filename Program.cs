@@ -10,7 +10,7 @@ namespace FlashcardApp
             ICommandCollection commands = new DefaultCommandCollection();
             RegisterCommands(commands);
 
-            IApp app = new DefaultApp(commands);
+            IApp app = new MainApp(commands);
             app.Start();
         }
 
