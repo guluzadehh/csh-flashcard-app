@@ -7,10 +7,7 @@ namespace FlashcardLib
     {
         public static StackModel CreateStack(string name)
         {
-            if (name.Length == 0)
-            {
-                throw new BaseException("Name is empty.");
-            }
+            StackValidator.ValidateName(name);
 
             Dictionary<string, object> parameters = [];
             parameters.Add("@Name", name);
@@ -85,6 +82,8 @@ namespace FlashcardLib
 
         public static StackModel EditStack(StackModel stack, string name)
         {
+            StackValidator.ValidateName(name);
+
             string query = @"UPDATE ""Stacks"" SET ""Name"" = @Name WHERE ""Id""=@Id;";
 
             Dictionary<string, object> parameters = [];
