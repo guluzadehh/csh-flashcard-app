@@ -6,11 +6,6 @@ namespace FlashcardLib
 
     public class SqlAccess
     {
-        public static void InitDatabase()
-        {
-
-        }
-
         public static void ExecuteReader(string query, Dictionary<string, object> parameters, ReaderCallback cb)
         {
             using NpgsqlConnection conn = new(Helpers.GetConnectionString("FlashcardDB"));
