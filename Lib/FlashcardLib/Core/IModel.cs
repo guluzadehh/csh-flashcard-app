@@ -1,6 +1,6 @@
 using System.Data.Common;
 
-namespace FlashcardApp
+namespace FlashcardLib
 {
     public interface IModel
     {
