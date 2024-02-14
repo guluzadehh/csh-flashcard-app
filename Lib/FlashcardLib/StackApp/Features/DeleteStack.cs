@@ -6,7 +6,12 @@ namespace FlashcardLib
     {
         public override void Run()
         {
-            throw new NotImplementedException();
+            StackServices stackServices = new(App);
+
+            StackModel stack = stackServices.GetStack();
+            StackRepo.DeleteStack(stack);
+
+            SendResponse($"Stack [{stack.Id}] was deleted successfully!");
         }
     }
 }

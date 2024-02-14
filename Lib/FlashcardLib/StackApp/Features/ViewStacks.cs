@@ -6,13 +6,8 @@ namespace FlashcardLib
     {
         public override void Run()
         {
-            List<StackModel> stacks = SqlAccess.ReadStacks();
-
-            foreach (StackModel stack in stacks)
-            {
-                App.Output.Write($"{stack.Id}. {stack.Name}");
-            }
-
+            StackServices stackServices = new(App);
+            stackServices.ListStacks();
             App.Output.Wait();
         }
     }
