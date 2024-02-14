@@ -53,7 +53,7 @@ namespace FlashcardLib
         public static List<CardModel> AllCards(StackModel stack, int? limit = null)
         {
             string limitQuery = limit != null ? $" LIMIT {limit} " : string.Empty;
-            string query = $@"SELECT * FROM ""Cards""{limitQuery} WHERE ""StackId"" = @StackId;";
+            string query = $@"SELECT * FROM ""Cards"" WHERE ""StackId"" = @StackId{limitQuery};";
 
             Dictionary<string, object> parameters = [];
             parameters.Add("@StackId", stack.Id);
