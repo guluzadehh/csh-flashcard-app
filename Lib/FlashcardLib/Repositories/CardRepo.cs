@@ -38,7 +38,7 @@ namespace FlashcardLib
             {
                 if (!reader.HasRows)
                 {
-                    throw new BaseException("Something went wrong while creating a stack");
+                    throw new BaseException("Something went wrong while creating a card");
                 }
 
                 reader.Read();
