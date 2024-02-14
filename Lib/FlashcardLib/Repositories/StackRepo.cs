@@ -34,7 +34,12 @@ namespace FlashcardLib
 
         public static StackModel GetStack(int id)
         {
-            string query = @"SELECT * FROM ""Stacks"" WHERE ""Id"" = @Id LIMIT 1;";
+            string query =
+                @"SELECT *, (
+                    SELECT COUNT(*) FROM ""Cards"" WHERE ""Cards"".""StackId"" = ""Stacks"".""Id""
+                ) AS ""CardsCount"" 
+                FROM ""Stacks"" 
+                WHERE ""Id"" = @Id LIMIT 1;";
 
             Dictionary<string, object> parameters = [];
             parameters.Add("@Id", id);
