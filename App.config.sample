@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<configuration>
+    <connectionStrings>   
+        <add name="FlashcardDB" 
+             connectionString="Host=;Username=;Password=;Database="/>
+    </connectionStrings>
+</configuration>
