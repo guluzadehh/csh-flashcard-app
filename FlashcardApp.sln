@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlashcardApp", "FlashcardApp.csproj", "{2648128D-061E-4C8F-81A7-25E90557C604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{A9E7DD9B-08E3-4D1C-B246-2618E9FE4336}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandApp", "Lib\csh-console-library\CommandApp.csproj", "{807B162F-0350-4F01-9CC8-1AAD32D92940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2648128D-061E-4C8F-81A7-25E90557C604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2648128D-061E-4C8F-81A7-25E90557C604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2648128D-061E-4C8F-81A7-25E90557C604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2648128D-061E-4C8F-81A7-25E90557C604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807B162F-0350-4F01-9CC8-1AAD32D92940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807B162F-0350-4F01-9CC8-1AAD32D92940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807B162F-0350-4F01-9CC8-1AAD32D92940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807B162F-0350-4F01-9CC8-1AAD32D92940}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{807B162F-0350-4F01-9CC8-1AAD32D92940} = {A9E7DD9B-08E3-4D1C-B246-2618E9FE4336}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96FFD2DD-500F-4A12-9D49-4A6EA9336614}
+	EndGlobalSection
+EndGlobal

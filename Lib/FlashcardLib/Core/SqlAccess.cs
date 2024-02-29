@@ -9,7 +9,7 @@ namespace FlashcardLib
         public static void ExecuteReader(string query, Dictionary<string, object> parameters, ReaderCallback cb)
         {
             using NpgsqlConnection conn = new(Helpers.GetConnectionString("FlashcardDB"));
-            NpgsqlCommand command = PrepareCommand(conn, query, parameters);
+            using NpgsqlCommand command = PrepareCommand(conn, query, parameters);
             conn.Open();
 
             NpgsqlDataReader reader = command.ExecuteReader();
@@ -21,7 +21,7 @@ namespace FlashcardLib
         public static object? ExecuteScalar(string query, Dictionary<string, object> parameters)
         {
             using NpgsqlConnection conn = new(Helpers.GetConnectionString("FlashcardDB"));
-            NpgsqlCommand command = PrepareCommand(conn, query, parameters);
+            using NpgsqlCommand command = PrepareCommand(conn, query, parameters);
             conn.Open();
             return command.ExecuteScalar();
         }
@@ -29,7 +29,7 @@ namespace FlashcardLib
         public static int ExecuteNonQuery(string query, Dictionary<string, object> parameters)
         {
             using NpgsqlConnection conn = new(Helpers.GetConnectionString("FlashcardDB"));
-            NpgsqlCommand command = PrepareCommand(conn, query, parameters);
+            using NpgsqlCommand command = PrepareCommand(conn, query, parameters);
             conn.Open();
             return command.ExecuteNonQuery();
         }
